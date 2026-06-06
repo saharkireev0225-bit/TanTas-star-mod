@@ -1,0 +1,18 @@
+{
+    type: OreBlock
+    name: "cardone-ore"
+    localizedName: "Кардоновая руда"
+    description: "Белые кристаллы Кардона. Добывается бурилкой."
+    
+    // Какой ресурс выпадает при добыче (ВАЖНО!)
+    itemDrop: "cardon"
+    
+    // Визуал
+    variants: 0
+    region: "cardone_ore"
+    mapColor: "eeeeff"
+    
+    // Свойства добычи
+    hardness: 1
+    playerUnmineable: false
+}

@@ -1,0 +1,11 @@
+{
+    type: material
+    name: "Кардон"
+    description: "Белый термостойкий кристалл. Основа всего на Кетарсусе."
+    color: "eeeeff"
+    hardness: 3
+    cost: 1
+    flammability: 0
+    explosiveness: 0
+    radioactivity: 0
+}

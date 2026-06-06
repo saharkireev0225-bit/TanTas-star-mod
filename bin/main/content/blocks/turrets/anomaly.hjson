@@ -1,0 +1,73 @@
+{
+    // 1. Если используете стандартный класс турели (ItemTurret), оставьте как есть
+    //    Если нужна кастомная логика, укажите свой класс, например:
+    // type: "tantasstar.content.blocks.GravityCollapserTurret"
+    type: "ItemTurret"
+    name: "anomaly"
+    localizedName: "Аномалия"
+    description: "Мощная турель, стреляющая снарядом, создающим гравитационную аномалию."
+
+    size: 9                      // Рекомендуемый размер 4x4 (9 — слишком большой)
+    health: 3000
+    range: 240
+    reloadTime: 600               // 10 секунд между выстрелами
+    targetAir: true
+    targetGround: true
+    shootSound: "laserblast"
+
+    // Энергопотребление
+    hasPower: true
+    consumePower: 5.0
+
+    // Потребление жидкости (охлаждённая обратная плазма)
+    hasLiquids: true
+    liquidCapacity: 200.0
+    consumes: {
+        liquid: {
+            liquid: "cooled-reverse-plasma"
+            amount: 100.0
+            optional: false
+        }
+    }
+
+    // Типы боеприпасов (расходует прилиевые слитки)
+    ammoTypes: {
+        "priliy-ingot": {
+            // ⚠️ Если нужна кастомная пуля с чёрной дырой, замените на:
+            // type: "tantasstar.content.bullets.BlackHoleBullet"
+            // и удалите все поля, кроме общих (damage, ammoMultiplier, status)
+            type: bullet: "tantasstar.content.TantasBullets.gravityBullet"
+            fromColor: "fff1cf"
+            toColor: "e8cd89"
+            damage: 45
+            width: 11
+            length: 145
+            ammoMultiplier: 1
+            status: "slow"
+            statusDuration: 120
+            smokeEffect: "none"
+            shootEffect: {
+                type: "ParticleEffect"
+                particles: 7
+                length: 50
+                cone: 35
+                line: true
+                lenFrom: 6
+                lenTo: 0
+                strokeFrom: 1.1
+                strokeTo: 0.85
+                lifetime: 18
+                colorFrom: "fff1cf"
+                colorTo: "fff1cf"
+            }
+        }
+    }
+
+    // Требования для постройки
+    requirements: [
+        "copper/100"
+    ]
+
+    category: "defense"
+
+}

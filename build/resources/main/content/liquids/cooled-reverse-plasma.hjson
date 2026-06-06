@@ -1,0 +1,23 @@
+{
+    type: Liquid                     // Обязательное поле
+    name: "cooled-reverse-plasma"            // Техническое имя
+    localizedName: "охлажденная обратная плазма" // Отображаемое имя
+    description: "Высокоэнергетическая фиолетовая плазма."
+
+    // ----- Визуальные эффекты -----
+    color: "dd88ff"                  // Основной цвет трубах и лужах[reference:1]
+    barColor: "dd88ff"               // Цвет индикатора в блоках
+    lightColor: "dd88ff"             // Цвет свечения (если блок светится)[reference:2]
+    gas: false                       // Является ли газом (по умолч. false)[reference:3]
+
+    // ----- Физические свойства -----
+    temperature: 0.9                 // Температура (0 - холод, 0.5 - норма, 1 - лава)[reference:4]
+    viscosity: 0.3                   // Вязкость (вода - 0.5, масло - 1.0)[reference:5]
+    heatCapacity: 1.5                // Теплоёмкость (вода ~0.4)[reference:6]
+    flammability: 0.8                // Горючесть (0-1)[reference:7]
+    explosiveness: 0.8               // Взрывоопасность (0-1)[reference:8]
+    
+    // ----- Особые параметры -----
+    coolant: true // Является ли охладителем[reference:9]
+    effect: "burning"                // Эффект при контакте
+}

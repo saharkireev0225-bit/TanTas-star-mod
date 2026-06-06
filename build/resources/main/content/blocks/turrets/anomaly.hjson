@@ -1,0 +1,59 @@
+{
+    type: "ItemTurret"
+    name: "anomaly"
+    localizedName: "Аномалия"
+    description: "Мощная турель, стреляющая снарядом, создающим гравитационную аномалию."
+
+    size: 4
+    health: 3000
+    range: 240
+    reloadTime: 600
+    targetAir: true
+    targetGround: true
+    shootSound: "laserblast"
+
+    // Энергопотребление
+    hasPower: true
+    consumePower: 5.0
+
+    // Потребление жидкости (если нужна)
+    hasLiquids: true
+    liquidCapacity: 200.0
+    consumes: {
+        liquid: {
+            liquid: "cooled-reverse-plasma"
+            amount: 100.0
+            optional: false
+        }
+    }
+
+    // Типы боеприпасов (расходует прилиевые слитки)
+    ammoTypes: {
+        "priliy-ingot": {
+            type: "ContinuousLaserBulletType"
+            length: -1
+            pierce: true
+            damage: 1000
+            fragBullets: 10
+            fragBullet: {
+                type: "BasicBulletType"
+                speed: 5
+                damage: 75
+                lifetime: 60
+                splashDamageRadius: 20
+                splashDamage: 50
+                hitEffect: "hitBulletSmall"    // ← исправлено!
+            }
+        }
+    }
+
+    // Требования для постройки
+    requirements: [
+        "copper/100"
+        "lead/75"
+        "silicon/50"
+        "thorium/25"
+    ]
+
+    category: "defense"
+}

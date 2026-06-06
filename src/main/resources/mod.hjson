@@ -1,0 +1,8 @@
+{
+    name: "tantas-star"
+    displayName: "Tantas Star"
+    author: "YourName"
+    description: ""
+    version: "1.0"
+    minGameVersion: 148
+}

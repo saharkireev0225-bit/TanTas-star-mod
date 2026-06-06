@@ -1,0 +1,39 @@
+{
+    name: "1_tantas-star"
+    localizedName: "Тантас"
+    description: "Горячая звезда."
+    
+    parent: "sun"
+    radius: 5.2
+    lightColor: "ff8866"
+    bloom: true
+    accessible: false
+    visible: true
+    alwaysUnlocked: true
+    isStar: true
+    
+    // ⚠️ КЛЮЧЕВЫЕ ПАРАМЕТРЫ из Астралиса
+    solarSystem: "1_tantas-star"
+    drawOrbit: false
+    orbitRadius: 3000
+    orbitSpacing: 16
+    
+    mesh: [
+        {
+            type: SunMesh
+            divisions: 6
+            octaves: 5
+            persistence: 0.7
+            scl: 1.8
+            pow: 1.1
+            mag: 1.3
+            colorScale: 1.2
+            colors: [
+                "ffaa77"
+                "ff8866"
+                "ff6644"
+                "dd4422"
+            ]
+        }
+    ]
+}

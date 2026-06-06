@@ -1,0 +1,11 @@
+{
+    type: material
+    name: "termite"
+    localizedName: "Термит"
+    description: "Порошкообразная руда. Выделяет тепло при обработке."
+    color: "ff5533"
+    hardness: 4
+    cost: 2
+    explosiveness: 0.6
+    flammability: 0.8
+}

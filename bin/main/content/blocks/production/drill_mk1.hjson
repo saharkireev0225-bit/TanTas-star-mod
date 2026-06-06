@@ -1,0 +1,40 @@
+{
+    type: Drill
+    name: "Термо-бурилка"
+    description: "Специализированная бурилка для добычи Кардона на раскалённой поверхности."
+    
+    size: 2
+    tier: 3                     // Уровень бурения (3 = может бурить hardness 3)
+    drillTime: 200               // Время бурения (тики)
+    
+    // Потребление энергии
+    hasPower: false
+    
+    category:"production"
+
+    // Что добывает
+    itemCapacity: 20
+    
+    // Можно ставить только на определённые блоки
+    canMine: [
+        "cardone_ore"            // Только на кратоновом щебне
+    ]
+    
+    // Требования для постройки
+    requirements: [
+        "cardon/20"
+    ]
+    
+    category: "production"
+
+    
+    
+    // Визуал
+    rotate: true
+    region: "thermo-drill"
+    updateEffect: "smoke"
+    
+    // Температурные эффекты
+    heatColor: "ff8844"
+    ambientSound: "drill"
+}

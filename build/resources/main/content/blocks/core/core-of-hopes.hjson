@@ -1,0 +1,33 @@
+{
+    type: CoreBlock
+    name: "core-of-hopes"
+    localizedName: "Ядро надежд"
+    description: "Ядро, созданное с надеждой на колонизацию Кетарсуса."
+    
+    size: 3
+    health: 8000
+    itemCapacity: 4500
+    
+    // Стартовые ресурсы
+    startingItems: [
+        "cardon/200"
+        "raw-priliy/50"
+    ]
+    
+    // Требования для постройки дополнительных ядер
+    requirements: [
+        "cardon/1500"
+        "raw-priliy/750"
+    ]
+    
+    category: "effect"
+    alwaysUnlocked: true
+    
+    // Визуал
+    region: "core-of-hopes"
+    rotate: true
+    
+    // Настройки карты
+    canBeBuiltOn: true
+    placeableOn: true
+}

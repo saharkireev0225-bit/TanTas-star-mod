@@ -1,0 +1,12 @@
+{
+    type: OreBlock
+    name: "termite-ore"
+    localizedName: "Термитовая руда"
+    description: "Порошкообразная термоактивная руда."
+    
+    itemDrop: "termite"
+    variants: 3
+    mapColor: "ff5533"
+    hardness: 4
+    playerUnmineable: false
+}

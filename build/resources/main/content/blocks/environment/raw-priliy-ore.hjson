@@ -1,0 +1,13 @@
+{
+    type: OreBlock
+    name: "raw-priliy-ore"
+    localizedName: "Руда Прилия"
+    description: "Фиолетовые кристаллы Прилия."
+    
+    itemDrop: "raw-priliy"
+    variants: 0
+    mapColor: "dd88ff"
+    hardness: 2
+    playerUnmineable: false
+    region: "raw-priliy-ore"
+}

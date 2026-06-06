@@ -1,0 +1,8 @@
+{
+    type: material
+    name: "Сырой Прилий"
+    description: "Переливчатый мягкий кристалл. Похож на висмут."
+    color: "cc88ff"
+    hardness: 2
+    cost: 1.5
+}

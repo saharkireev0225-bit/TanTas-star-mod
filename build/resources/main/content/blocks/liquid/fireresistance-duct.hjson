@@ -1,0 +1,25 @@
+{
+    type: Conduit
+    name: "fireresistance-duct"
+    localizedName: "Огнестойкая труба"
+    description: "Перемещает жидкости в экстремальных условиях. Выдерживает высокие температуры."
+    
+    size: 1
+    liquidCapacity: 20
+    liquidPressure: 1.0
+    
+    // Вариации текстур (0..4)
+    variants: 5
+    region: "fireresistance-duct-bottom"
+    topRegion: "fireresistance-duct-top"
+    
+    category:"liquid"
+
+    requirements: [
+        "cardon/2"
+        "raw-priliy/1"
+    ]
+    
+    
+    rotate: true
+}

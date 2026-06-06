@@ -1,0 +1,199 @@
+{
+    name: "ketarsus"
+    localizedName: "Кетарсус"
+    description: "[scarlet]Выжженная планета у звезды Тантас.\n\n[lightgray]Здесь нет привычных ресурсов. Только [sky]Кардон[] и [accent]Прилий[]."
+    
+    generator: "SerpuloPlanetGenerator"
+    defaultCore: "core-nucleus"
+    
+    // Родительская звезда
+    parent: "1_tantas-star"
+    solarSystem: "1_tantas-star"
+    
+    // Параметры планеты
+    radius: 0.85
+    minZoom: 0.55
+    sectorSize: 3
+    startSector: 15
+    
+    // Атмосфера
+    atmosphereRadIn: 0.09
+    atmosphereRadOut: 0.3
+    atmosphereColor: "ffaa66"
+    
+    // Иконка
+    iconColor: "ffaa66"
+    icon: "planet"
+    
+    // Визуальные эффекты
+    bloom: true
+    alwaysUnlocked: true
+    accessible: true
+    visible: true
+    
+    // Правила сектора
+    clearSectorOnLose: true
+    allowLaunchSchematics: false
+    allowLaunchLoadout: false
+    allowWaveSimulation: true
+    prebuildBase: false
+    allowLaunchToNumbered: false
+    
+    // Скрываем стандартные ресурсы
+    hiddenItems: [
+        "copper"
+        "lead"
+        "metaglass"
+        "graphite"
+        "sand"
+        "coal"
+        "titanium"
+        "thorium"
+        "scrap"
+        "silicon"
+        "plastanium"
+        "phase-fabric"
+        "surge-alloy"
+        "spore-pod"
+        "blast-compound"
+        "pyratite"
+        "water"
+        "cryofluid"
+        "slag"
+        "oil"
+    ]
+    
+    // Разрешаем только наши ресурсы
+    itemWhitelist: [
+        "cardon"
+        "raw-priliy"
+        "priliy-ingot"
+    ]
+        
+        // Визуал поверхности (детализированный)
+    mesh: [
+        {
+            // Лавовые трещины (теперь без свечения)
+            type: SunMesh
+            divisions: 6
+            octaves: 1
+            persistence: 0.5
+            scl: 2.2
+            pow: 1.1
+            mag: 1.2
+            colorScale: 1.3
+            colors: [
+                "cc5533"   // Приглушённый красный
+                "bb6644"
+                "aa7755"
+            ]
+        }
+        {
+            // Базальная кора
+            type: NoiseMesh
+            bloom: false
+            seed: 528
+            color1: "aa6644"
+            color2: "885533"
+            divisions: 6
+            radius: 0.82
+            octaves: 4
+            persistence: 0.55
+            coct: 2.0
+            cper: 2.4
+            scale: 0.5
+            mag: 1.3
+        }
+        {
+            // Пустоши (темнее)
+            type: NoiseMesh
+            bloom: false
+            seed: 873
+            color1: "553322"
+            color2: "443322"
+            divisions: 7
+            radius: 0.78
+            octaves: 5
+            persistence: 0.7
+            coct: 2.8
+            cper: 2.6
+            scale: 0.8
+            mag: 1.6
+        }
+        {
+            // Кристаллы Кардона (умеренное свечение)
+            type: NoiseMesh
+            bloom: true
+            seed: 245
+            color1: "ccddff"   // Помягче
+            color2: "aabbee"
+            divisions: 6
+            radius: 0.75
+            octaves: 4
+            persistence: 0.6
+            coct: 1.5
+            cper: 1.2
+            scale: 0.4
+            mag: 1.4
+        }
+        {
+            // Горы (без свечения)
+            type: NoiseMesh
+            bloom: false
+            seed: 911
+            color1: "664422"
+            color2: "442211"
+            divisions: 6
+            radius: 0.70
+            octaves: 6
+            persistence: 0.85
+            coct: 3.5
+            cper: 2.8
+            scale: 0.9
+            mag: 2.2
+        }
+    ]
+    
+    // Облака/атмосферные эффекты (пепельные бури и зной)
+    cloudMesh: [
+        {
+            // Верхний слой — быстрые пепельные бури
+            type: HexSkyMesh
+            bloom: true
+            speed: -3.2
+            divisions: 6
+            radius: 0.095
+            color: "8844227f"
+            octaves: 4
+            persistence: 0.6
+            scl: 1.3
+            thresh: 0.65
+        }
+        {
+            // Средний слой — ядовитые испарения
+            type: HexSkyMesh
+            bloom: true
+            speed: -2.5
+            divisions: 7
+            radius: 0.125
+            color: "aa66446e"
+            octaves: 3
+            persistence: 0.75
+            scl: 0.95
+            thresh: 0.55
+        }
+        {
+            // Нижний слой — знойное марево
+            type: HexSkyMesh
+            bloom: true
+            speed: 1.8
+            divisions: 5
+            radius: 0.155
+            color: "dd88444a"
+            octaves: 3
+            persistence: 0.5
+            scl: 0.75
+            thresh: 0.4
+        }
+    ]
+}

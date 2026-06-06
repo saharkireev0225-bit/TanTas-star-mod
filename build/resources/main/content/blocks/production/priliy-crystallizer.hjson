@@ -1,0 +1,29 @@
+{
+    type: GenericCrafter
+    name: "priliy-crystallizer"
+    localizedName: "Кристаллизатор Прилия"
+    description: "Превращает сырые кристаллы Прилия в стабильные слитки."
+    
+    size: 3
+    hasPower: true
+    hasItems: true
+    
+    category:"production"
+
+    craftTime: 90
+    consumePower: 1.5
+    
+    consumes: {
+        items: [
+            "raw-priliy/2"
+            "cardon/1"
+        ]
+    }
+    
+    outputItem: "priliy-ingot/1"
+    
+    requirements: [
+        "cardon/120"
+        "raw-priliy/40"
+    ]
+}
